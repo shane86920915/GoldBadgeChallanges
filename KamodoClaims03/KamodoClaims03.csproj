@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B068E9A3-13F8-4393-A261-724A86BB250D}</ProjectGuid>
+    <ProjectGuid>{888EAC4D-B352-4B28-9459-F67BE2141669}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KomodoCafe03</RootNamespace>
-    <AssemblyName>KomodoCafe03</AssemblyName>
+    <RootNamespace>KamodoClaims03</RootNamespace>
+    <AssemblyName>KamodoClaims03</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,20 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuRepoTest.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KomodoCafe01\KomodoCafe01.csproj">
-      <Project>{e2445ca8-ad93-443d-b91b-6239de36e0df}</Project>
-      <Name>KomodoCafe01</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\KomodoCafe02\KomodoCafe02.csproj">
-      <Project>{532ee065-48e9-422b-857f-4294512cef60}</Project>
-      <Name>KomodoCafe02</Name>
+    <ProjectReference Include="..\KamodoClaims01\KamodoClaims01.csproj">
+      <Project>{4c581c9a-6e91-4b66-9f87-b631281c5fab}</Project>
+      <Name>KamodoClaims01</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

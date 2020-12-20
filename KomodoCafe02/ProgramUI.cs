@@ -22,7 +22,8 @@ namespace KomodoCafe02
             bool keepRunning = true;
             while (keepRunning)
             {
-                Console.WriteLine("Select a menu option.\n" +
+                Console.WriteLine("Select a menu opti(;" +
+                    "on.\n" +
                     "1. Create a new menu item.\n" +
                     "2. Delete existing menu item.\n" +
                     "3. Display all menu items.\n" +
@@ -76,11 +77,33 @@ namespace KomodoCafe02
             int orderNumberAsInt = int.Parse(orderNumberAsString);
             newMenuItem.OrderNumber = orderNumberAsInt;
 
-            Console.WriteLine("Enter the list of ingredients:");
-            // newMenuItem.ListOfIngredients;
-            string userinput = Console.ReadLine();
-            newMenuItem.ListOfIngredients.Add(userinput);// need to create an if statement. 
-            Console.WriteLine("Would you like do add an ingredient ");//create if in loop
+            /*  Console.WriteLine("Enter an  ingredient:");
+              // newMenuItem.ListOfIngredients;*/
+            string userinput;
+            bool ison = true;
+            while (ison)
+            {
+                Console.WriteLine("Would you like do add an ingredient  Y/N ");//create if in loop
+                userinput = Console.ReadLine();
+                if (userinput.ToLower() == "y") 
+                {
+                    Console.WriteLine("Enter an  ingredient:");
+
+                    userinput = Console.ReadLine();
+                newMenuItem.ListOfIngredients.Add(userinput);// need to create an if statement. 
+                }
+                else if (userinput.ToLower() == "n")
+                {
+                ison = false;
+
+                }
+
+
+
+            }
+
+            
+            
 
             Console.WriteLine("Enter the description of the menu item:");
             newMenuItem.Description = Console.ReadLine();
@@ -94,7 +117,7 @@ namespace KomodoCafe02
             Console.WriteLine("Enter the name of the meal:");
             newMenuItem.MealName = Console.ReadLine();
 
-
+            //need to call the Add method from repo
 
         }
 
@@ -122,7 +145,7 @@ namespace KomodoCafe02
         private void DisplayAllMenuItems()
         {
             Console.Clear();
-            List<Menu> listOfMenuItem = _menurepo.getMenuList();
+            List<Menu> listOfMenuItem = _menurepo.GetMenuList();
             Console.WriteLine("Display all memu items");
             foreach (Menu MenuItem in listOfMenuItem)
             {

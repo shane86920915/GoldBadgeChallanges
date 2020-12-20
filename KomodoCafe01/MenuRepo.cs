@@ -9,15 +9,15 @@ namespace KomodoCafe01
      public  class MenuRepo
     {   
        
-        private readonly List<Menu> _MenuContent = new List<Menu>();
+        protected  readonly List<Menu> _MenuContent = new List<Menu>();
 
-        public void AddMenuItemToList(Menu menuitem)
+      
+         public void AddMenuItemToList(Menu menuitem)
         {
             _MenuContent.Add(menuitem);
 
         }
-
-        public List<Menu> getMenuList()
+        public List<Menu> GetMenuList()
         {
             return _MenuContent;
         }

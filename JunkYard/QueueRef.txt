@@ -1,0 +1,46 @@
+﻿ var employee = new Employee(1, "Steve");
+            var employee2 = new Employee(2, "becky");
+            var employee3 = new Employee(3, "Jude");
+            var employee4 = new Employee(4, "Eve");
+            var employee5 = new Employee(5, "Sarah");
+
+            Queue<Employee> employees = new Queue<Employee>();
+
+            //FIFO
+            employees.Enqueue(employee);
+            employees.Enqueue(employee2);
+            employees.Enqueue(employee3);
+            employees.Enqueue(employee4);
+            employees.Enqueue(employee5);
+
+            foreach (var worker in employees)
+            {
+                Console.WriteLine(worker.EmployeeName);
+            }
+
+
+
+            Console.WriteLine("*******************************\n");
+
+            employees.Dequeue();
+
+
+            foreach (var worker in employees)
+            {
+                Console.WriteLine(worker.EmployeeName);
+            }
+
+            Console.WriteLine("*******************************\n");
+            
+            employees.Dequeue();
+            employees.Dequeue();
+
+
+            foreach (var worker in employees)
+            {
+                Console.WriteLine(worker.EmployeeName);
+            }
+
+            Console.WriteLine("**********see whos next in line*********************\n");
+
+            Console.WriteLine(employees.Peek().EmployeeName);
