@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KomodoCafe02
+namespace CarLot2
+
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var Program = new ProgramUI();
-            Program.Run();
-           
+            ProgramUI program = new ProgramUI();
+            program.Run();
         }
     }
 }

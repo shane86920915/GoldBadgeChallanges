@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamodoBagde09", "KamodoBagd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JunkYard", "JunkYard\JunkYard.csproj", "{BA15090F-152C-48D5-8219-AF1A010DB985}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLot", "CarLot\CarLot.csproj", "{09492217-A9DA-4C36-B861-CE023C53EF0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLot2", "ConsoleApp1\CarLot2.csproj", "{D2458C30-79BA-44B2-B198-C2F1CD022785}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{BA15090F-152C-48D5-8219-AF1A010DB985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA15090F-152C-48D5-8219-AF1A010DB985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA15090F-152C-48D5-8219-AF1A010DB985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09492217-A9DA-4C36-B861-CE023C53EF0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09492217-A9DA-4C36-B861-CE023C53EF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09492217-A9DA-4C36-B861-CE023C53EF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09492217-A9DA-4C36-B861-CE023C53EF0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2458C30-79BA-44B2-B198-C2F1CD022785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2458C30-79BA-44B2-B198-C2F1CD022785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2458C30-79BA-44B2-B198-C2F1CD022785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2458C30-79BA-44B2-B198-C2F1CD022785}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

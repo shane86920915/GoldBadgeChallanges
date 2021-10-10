@@ -12,7 +12,6 @@ namespace KamodoClaims01
     {
        private readonly  Queue<Claims> ClaimsQueue = new Queue<Claims>();
 
-     
         /*For #1, a claims agent could see all items in the queue listed out like this:
 
 ClaimID	Type	Description	Amount	DateOfAccident	DateOfClaim	IsValid
@@ -20,14 +19,10 @@ ClaimID	Type	Description	Amount	DateOfAccident	DateOfClaim	IsValid
 2	Home	House fire in kitchen.	$4000.00	4/11/18	4/12/18	true
 3	Theft	Stolen pancakes.	$4.00	4/27/18	6/01/18	false
 For #2, when a claims agent needs to deal with an item they see the next item in the queue.*/
-       
-
-
      
         public void AddClaimsToqueue(Claims claimsitem)
         {
             ClaimsQueue.Enqueue(claimsitem);
-
         }
 
         public Queue<Claims> GetClaimsQueue()
@@ -55,7 +50,6 @@ For #2, when a claims agent needs to deal with an item they see the next item in
 
         }
 
-
         public bool RemoveClaimItemFromList()
         {
 
@@ -78,8 +72,6 @@ For #2, when a claims agent needs to deal with an item they see the next item in
             }
             Console.WriteLine("There are currently no claims associated with that ID number...");
             return null;
-
-
         }
 
         public Claims ViewNextClaim()

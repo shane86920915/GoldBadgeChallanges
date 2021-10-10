@@ -21,7 +21,6 @@ namespace KamodoBadge08
             bool keepRunning = true;
             while (keepRunning)
             {
-
                 Console.WriteLine("Hello Security Admin, What would you like to do?\n" +
                     "1. create a new badge\n" +
                     "2. update doors on an existing badge.\n" +
@@ -46,18 +45,13 @@ namespace KamodoBadge08
                     default:
                         Console.WriteLine("Please choose a valid opion.");
                         break;
-
                 }
                 Console.WriteLine("Please press any key to continue...");
                 Console.ReadKey();
                 Console.Clear();
 
-
             }
-
-
         }
-
         private void CreateNewBadge()
         {
             Console.Clear();
@@ -84,13 +78,9 @@ namespace KamodoBadge08
                     keepRunning = false;
                 }
 
-
             }
             _badges.CreateBadge(newbadge);
         }
-
-
-
         public void UpdateDoorsOnExistingBadge()
         {
             Console.Clear();
@@ -110,7 +100,7 @@ namespace KamodoBadge08
             switch (inputDoor)
             {
                 case 1:
-                    Console.WriteLine("Please input a door name to delete");
+                    Console.WriteLine("Input a door name to delete");
                     var inputDoorName = Console.ReadLine();
                     _badges.RemoveADoor(userinput, inputDoorName);
                     break;
@@ -152,10 +142,6 @@ namespace KamodoBadge08
 
             }
         }
-
-        
-    
-
         public void ListOfBadgeNumbersAndDoorAccess()
         {
             Console.Clear();
@@ -186,14 +172,5 @@ namespace KamodoBadge08
             _badges.CreateBadge(badge2);
             _badges.CreateBadge(badge3);
         }
-
-
-
-
-
-
-
-
-
     }
 }

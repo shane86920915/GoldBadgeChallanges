@@ -10,6 +10,7 @@ namespace KamodoBadge07
     {
         public int BadgeID { get; set; }
         public List<string> DoorNames { get; set; } = new List<string>();
+
         public Badge()
         {
 
@@ -18,10 +19,8 @@ namespace KamodoBadge07
         {
             BadgeID = badgeid;
             DoorNames = doornames;
-
          
         }
-
 
     }
 }

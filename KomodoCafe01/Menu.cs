@@ -14,7 +14,6 @@ namespace KomodoCafe01
         public string Description { get; set; }
         public decimal Price { get; set; }
 
-
         public Menu()
         {
 
@@ -28,7 +27,6 @@ namespace KomodoCafe01
             Description = description;
             Price = price;
             MealName = mealName;
-
 
         }
     }

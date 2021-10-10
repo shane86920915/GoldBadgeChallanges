@@ -28,7 +28,6 @@ namespace KamodoClaims01
         {
 
         }
-
         public Claims(int claimid, ClaimsType claimtype, string description, decimal claimamount, DateTime dateofincident, DateTime dateofclaim, bool isvalid)
         {
             ClaimID = claimid;
@@ -39,12 +38,8 @@ namespace KamodoClaims01
             DateOfClaim = dateofclaim;
             IsValid = isvalid;
 
-
-
         }
-
     }
-
 }
 
 

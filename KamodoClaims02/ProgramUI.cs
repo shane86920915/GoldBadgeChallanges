@@ -13,8 +13,6 @@ namespace KamodoClaims02
     {
         private readonly ClaimsRepo _Claimsrepo = new ClaimsRepo();
 
-      //  private readonly Queue<Claims> _ClaimsQueue = new Queue<Claims>();
-
         public void Run()
         {
             SeedClaims();
@@ -55,9 +53,6 @@ namespace KamodoClaims02
                 Console.ReadKey();
                 Console.Clear();
             }
-
-
-
         }
 
         private void EnterANewClaim()
@@ -66,7 +61,17 @@ namespace KamodoClaims02
             Claims claims = new Claims();
             
             Console.WriteLine("Please enter a ClaimId.");
-            var inputClaimId = int.Parse(Console.ReadLine());
+            var inputClaimId = Console.ReadLine();
+            try 
+	        {	        
+		       int inputClaimIdAsInt = int.Parse(inputClaimId)
+	        }
+	         catch (FormatException)
+	        {
+
+	        	Console.WriteLine("Invalid input: Only numbers are allowed!");
+	        	
+	        }
             claims.ClaimID = inputClaimId;
 
             Console.WriteLine("Please make a selection\n" +
@@ -101,11 +106,8 @@ namespace KamodoClaims02
             }
 
             _Claimsrepo.AddClaimsToqueue(claims);
-
-
         }
 
-        //helper method 
         DateTime GetADate(string message)
         {
             Console.WriteLine($"********{message}*************");
@@ -128,17 +130,15 @@ namespace KamodoClaims02
         private void TakeCareOfNextClaim()
         {
             Console.Clear();
-            //show claim in console
+           
            Claims claim= _Claimsrepo.ViewNextClaim();
             if (claim != null)
             {
                 ViewClaimInfo(claim);
-               
-                //ask if user wants to handle the claim
+
                 Console.WriteLine("Do you want to handle this claim? y/n");
                 string inputHandleClaim = Console.ReadLine();
                
-                //conditional if the user presses y or n
                 if (inputHandleClaim == "Y" || inputHandleClaim == "y")
                 {
                     _Claimsrepo.RemoveClaimItemFromList();
@@ -176,7 +176,6 @@ namespace KamodoClaims02
             {
                 ViewClaimInfo(claim);
             }
-
         }
         private void SeedClaims()
         {
@@ -184,20 +183,12 @@ namespace KamodoClaims02
             Claims claims2 = new Claims(1, ClaimsType.Home, "House...", 4000.00m, new DateTime(2020, 04, 12), new DateTime(2020, 07, 07), false);
             Claims claims3 = new Claims(1, ClaimsType.Theft, "Theft...", 5000.00m, new DateTime(2020, 04, 12), new DateTime(2020, 05, 07), true);
 
-
             _Claimsrepo.AddClaimsToqueue(claims1);
             _Claimsrepo.AddClaimsToqueue(claims2);
             _Claimsrepo.AddClaimsToqueue(claims3);
         
-        
-        
         }
-
     }
-
-
-
-
 }
 
 

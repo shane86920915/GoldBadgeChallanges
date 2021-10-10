@@ -23,9 +23,6 @@ namespace KamodoBadge07
             return _badges;
         }
 
-        //Edit badge (update)
-        //get old badge by dictKey
-        //change oldbadge value to newBadge
         public bool EditBadge(int dictkey, Badge badge)
         {
             Badge badge1 = GetBadgeByKey(dictkey);
@@ -38,8 +35,6 @@ namespace KamodoBadge07
             return false;
         }
 
-
-        //helper method
         public Badge GetBadgeByKey(int dictKey)
         {
             foreach (var pair in _badges)
@@ -51,7 +46,6 @@ namespace KamodoBadge07
             }
             return null;
         }
-
 
         public bool RemoveADoor(int dictKey, string doorName)
         {

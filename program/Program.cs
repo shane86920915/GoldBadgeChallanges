@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KomodoCafe02
+namespace program
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var Program = new ProgramUI();
-            Program.Run();
-           
         }
     }
 }

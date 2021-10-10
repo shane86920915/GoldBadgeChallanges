@@ -22,11 +22,11 @@ namespace KomodoCafe01
             return _MenuContent;
         }
 
-        public bool RemoveMenuItemFromList(string mealName)
+        public bool RemoveMenuItemFromList(int mealId)
         {
-            Menu menuItem = GetMenuItemByName(mealName);
+            var menuItem = GetMenuItemById (mealId);
 
-            if (mealName == null)
+            if (menuItem == null)
             {
                 return false;
             }
@@ -41,31 +41,20 @@ namespace KomodoCafe01
             {
                 return false;
             }
-
-          
-
-            
         }
-
-        public Menu GetMenuItemByName(string MealName)
+        //helper Method
+        public Menu GetMenuItemById(int MenuNumber)
         {
-            foreach (Menu menuItem in _MenuContent)
+            foreach (var menuItem in _MenuContent)
             {
-                if (menuItem.MealName == MealName)
+                if (menuItem.OrderNumber == MenuNumber)
                 {
                     return menuItem;
                 }
             }
             Console.WriteLine("There is no menu item with that name.");
             return null;
-
-
-
-
-
-
         }
-
 
     }
 }

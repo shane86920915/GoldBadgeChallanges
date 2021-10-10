@@ -38,22 +38,17 @@ namespace KomodoCafe03
 
             Menu menuItem = new Menu();
 
-            //      MealName = "SingleCheeseBurger"
-
             MenuRepo repo = new MenuRepo();
             repo.AddMenuItemToList(menuItem);
 
             List<Menu> repoList = repo.GetMenuList();
             Assert.AreEqual(listcount + 1, repoList.Count);
 
-
-
         }
         //update
         /*[TestMethod]
         public void UpdateExistingContent()
         {
-
             _menurepo = new MenuRepo();
             Menu newMenu = new Menu(1, new List<string> { "Hamburger", "Cheese", "Bun", "Mayo", "Mustard", "Ketchup" },
                 "Single Cheese burgar, onion rings and a soft drink.", 5.67m, "Singal cheese burger meal");
@@ -67,13 +62,7 @@ namespace KomodoCafe03
         {
             bool deleteMenuItem = _menurepo.RemoveMenuItemFromList(_item.MealName);
             Assert.IsTrue(deleteMenuItem);
-        
-
 
         }
-
-
-
-
     }
 }
